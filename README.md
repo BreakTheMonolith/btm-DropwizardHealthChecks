@@ -11,7 +11,7 @@ Health checks currently available are:
 * DataSourceHealthcheck - Checks applications ability to connect to a JDBC DataSource
 * JDBCHealthcheck - Checks applications ability to connect to a database via JDBC
 
-### System Requirements ###
+### System Requirements For All Checks ###
 * Java JDK 1.7 or later
 * io.dropwizard.metrics / metrics-healthchecks
 * org.apache.commons / commons-lang3
