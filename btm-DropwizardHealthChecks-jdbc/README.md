@@ -1,11 +1,11 @@
-# DropwizardHealthChecks-jdbc
+# btm-DropwizardHealthChecks-jdbc
 Provides health checks to databases supported by JDBC. 
 
 ### Installation ###
 
 A Maven option is forthcoming.
 
-To install, simply include all parent dependencies described [here](../README.md). No
+To install, simply include btm-DropwizardHealthChecks-jdbc.jar and all parent dependencies described [here](../README.md). No
 additional dependencies are needed.
 
 ### Test SQL Queries ###

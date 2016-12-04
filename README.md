@@ -1,4 +1,4 @@
-# DropwizardHealthChecks
+# btm-DropwizardHealthChecks
 A Library of reusable health checks implementing the Dropwizard Health Check Framework.
 
 This product is dedicated to making health checks as simple as possible so that you spend less
