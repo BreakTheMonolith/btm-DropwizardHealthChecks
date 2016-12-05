@@ -205,5 +205,6 @@
 
 	<modules>
 		<module>btm-DropwizardHealthChecks-jdbc</module>
+		<module>btm-DropwizardHealthChecks-net</module>
 	</modules>
 </project>

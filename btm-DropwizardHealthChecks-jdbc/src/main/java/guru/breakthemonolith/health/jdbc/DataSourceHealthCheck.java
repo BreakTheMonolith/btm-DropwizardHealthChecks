@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import com.codahale.metrics.health.HealthCheck;
 
 /**
- * Checks the health of a JDBC DataSource
+ * Checks the health of a JDBC DataSource. This class is thread safe.
  * 
  * <p>
  * Inputs required for this health check are the following:
@@ -39,15 +39,15 @@ import com.codahale.metrics.health.HealthCheck;
  * @see <a href=
  *      "https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html">Connection</a>
  */
-public class DataSourceHealthcheck extends HealthCheck {
+public class DataSourceHealthCheck extends HealthCheck {
 
 	// Not 'final' so it can be injected for testing
-	private static Logger logger = LoggerFactory.getLogger(DataSourceHealthcheck.class);
+	private static Logger logger = LoggerFactory.getLogger(DataSourceHealthCheck.class);
 
 	private DataSource dataSource;
 	private String testSqlText;
 
-	public DataSourceHealthcheck(DataSource dataSource, String testSqlText) {
+	public DataSourceHealthCheck(DataSource dataSource, String testSqlText) {
 		Validate.notNull(dataSource, "Null dataSource is not allowed.");
 		Validate.notBlank(testSqlText, "Null or blank testSqlText is not allowed.");
 		this.dataSource = dataSource;
@@ -65,9 +65,9 @@ public class DataSourceHealthcheck extends HealthCheck {
 			rSet = stmt.executeQuery(testSqlText);
 			safeClose(rSet);
 		} catch (Exception e) {
-			logger.error("Healthcheck Failure",
-					new ContextedRuntimeException(e).addContextValue("datasource", dataSource));
-			return Result.unhealthy(e);
+			Exception wrappedException = new ContextedRuntimeException(e).addContextValue("datasource", dataSource);
+			logger.error("Healthcheck Failure", wrappedException);
+			return Result.unhealthy(wrappedException);
 
 		} finally {
 			safeClose(stmt);

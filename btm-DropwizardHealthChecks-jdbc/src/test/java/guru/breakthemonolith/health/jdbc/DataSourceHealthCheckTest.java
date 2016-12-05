@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 import com.codahale.metrics.health.HealthCheck.Result;
 
 @RunWith(MockitoJUnitRunner.class)
-public class DataSourceHealthcheckTest {
+public class DataSourceHealthCheckTest {
 
 	@Mock
 	private DataSource dataSourceMock;
@@ -39,14 +39,14 @@ public class DataSourceHealthcheckTest {
 	@Mock
 	private Logger loggerMock;
 
-	private DataSourceHealthcheck healthCheck;
+	private DataSourceHealthCheck healthCheck;
 
 	private static final String TEST_QUERY = "select 1";
 	private static final Exception TEST_EXCEPTION = new SQLException("crap");
 
 	@Before
 	public void setUp() throws Exception {
-		healthCheck = new DataSourceHealthcheck(dataSourceMock, TEST_QUERY);
+		healthCheck = new DataSourceHealthCheck(dataSourceMock, TEST_QUERY);
 		FieldUtils.writeField(healthCheck, "logger", loggerMock, true);
 	}
 
@@ -61,17 +61,17 @@ public class DataSourceHealthcheckTest {
 
 	@Test(expected = NullPointerException.class)
 	public void constructorMissingDataSource() throws Exception {
-		new DataSourceHealthcheck(null, TEST_QUERY);
+		new DataSourceHealthCheck(null, TEST_QUERY);
 	}
 
 	@Test(expected = NullPointerException.class)
 	public void constructorMissingTestSQL() throws Exception {
-		new DataSourceHealthcheck(dataSourceMock, null);
+		new DataSourceHealthCheck(dataSourceMock, null);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void constructorBlankTestSQL() throws Exception {
-		new DataSourceHealthcheck(dataSourceMock, "");
+		new DataSourceHealthCheck(dataSourceMock, "");
 	}
 
 	@Test
@@ -101,7 +101,7 @@ public class DataSourceHealthcheckTest {
 
 		Result result = healthCheck.check();
 		Assert.assertTrue(!result.isHealthy());
-		Assert.assertEquals(TEST_EXCEPTION, result.getError());
+		Assert.assertEquals(TEST_EXCEPTION, result.getError().getCause());
 
 		Mockito.verify(loggerMock).error(Matchers.anyString(), Matchers.any(ContextedRuntimeException.class));
 		Mockito.verify(connectionMock).close();

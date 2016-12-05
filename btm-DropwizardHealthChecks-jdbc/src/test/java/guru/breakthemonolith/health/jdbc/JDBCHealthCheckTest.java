@@ -6,23 +6,23 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class JDBCHealthcheckTest {
+public class JDBCHealthCheckTest {
 
 	private static final String TEST_JDBC_CONNECTION_URL = "jdbc:h2:mem:testdb";
 	private static final Properties TEST_PROPERTIES = new Properties();
 	private static final String TEST_QUERY = "select 1";
 
-	private JDBCHealthcheck healthCheck;
+	private JDBCHealthCheck healthCheck;
 
 	@Test
 	public void constructorTwoArgs() throws Exception {
-		healthCheck = new JDBCHealthcheck(TEST_JDBC_CONNECTION_URL, TEST_QUERY);
+		healthCheck = new JDBCHealthCheck(TEST_JDBC_CONNECTION_URL, TEST_QUERY);
 		validateTwoArgs();
 	}
 
 	@Test
 	public void constructorThreeArgs() throws Exception {
-		healthCheck = new JDBCHealthcheck(TEST_JDBC_CONNECTION_URL, TEST_PROPERTIES, TEST_QUERY);
+		healthCheck = new JDBCHealthCheck(TEST_JDBC_CONNECTION_URL, TEST_PROPERTIES, TEST_QUERY);
 		validateTwoArgs();
 
 		Properties jdbcProps = (Properties) FieldUtils.readField(findJDBCDataSource(), "connectionProps", true);
