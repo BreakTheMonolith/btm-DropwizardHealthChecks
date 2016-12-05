@@ -22,23 +22,23 @@ For PostgreSQL, MySQL, Microsoft SQL Server and several others:
 select 1
 ```  
 
-### DataSourceHealthcheck ###
+### DataSourceHealthCheck ###
 
 Example usage:
 ```  
-import guru.breakthemonolith.health.jdbc.DataSourceHealthcheck;
+import guru.breakthemonolith.health.jdbc.DataSourceHealthCheck;
 
-DataSourceHealthcheck healthCheck = new DataSourceHealthcheck(myDataSource, myTestSQL);
+DataSourceHealthCheck healthCheck = new DataSourceHealthCheck(myDataSource, myTestSQL);
 myHealthCheckRegistry.register("database", healthCheck);
 ```  
 
-### JDBCHealthcheck ###
+### JDBCHealthCheck ###
 
 Example usage:
 ```  
-import guru.breakthemonolith.health.jdbc.JDBCHealthcheckTest;
+import guru.breakthemonolith.health.jdbc.JDBCHealthCheck;
 
-JDBCHealthcheck healthCheck = new JDBCHealthcheck(myJDBCConnectionUrl, myTestSQL);
+JDBCHealthCheck healthCheck = new JDBCHealthCheck(myJDBCConnectionUrl, myTestSQL);
 myHealthCheckRegistry.register("database", healthCheck);
 ```  
 

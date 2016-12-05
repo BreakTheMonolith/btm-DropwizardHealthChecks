@@ -165,7 +165,7 @@ public class HttpHealthCheckTest {
 		FieldUtils.writeField(healthCheck3Args, "checkUrl", "invalidUrl", true);
 
 		HealthCheck.Result result = healthCheck3Args.check();
-		System.out.println(result.getMessage());
+		// System.out.println(result.getMessage());
 
 		Mockito.verify(loggerMock).error(Matchers.anyString(), Matchers.any(ContextedRuntimeException.class));
 		Assert.assertTrue(result.getMessage().contains("invalidUrl"));
@@ -180,7 +180,7 @@ public class HttpHealthCheckTest {
 		FieldUtils.writeField(healthCheck3Args, "checkUrl", "invalidUrl", true);
 
 		HealthCheck.Result result = healthCheck3Args.check();
-		System.out.println(result.getMessage());
+		// System.out.println(result.getMessage());
 		Assert.assertTrue(result.getMessage().contains("headerMap=null"));
 	}
 

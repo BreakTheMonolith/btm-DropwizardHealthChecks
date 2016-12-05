@@ -8,8 +8,13 @@ Health checks currently available are:
 ### Relational Database Checks ###
 [Usage and Install documentation](btm-DropwizardHealthChecks-jdbc/README.md)
 
-* DataSourceHealthcheck - Checks applications ability to connect to a JDBC DataSource
-* JDBCHealthcheck - Checks applications ability to connect to a database via JDBC
+* DataSourceHealthCheck - Checks applications ability to connect to a JDBC DataSource
+* JDBCHealthCheck - Checks applications ability to connect to a database via JDBC
+
+### Network Resource Checks ###
+[Usage and Install documentation](btm-DropwizardHealthChecks-net/README.md)
+
+* HttpHealthCheck - Health check for dependent Http(s) resources or services
 
 ### System Requirements For All Checks ###
 * Java JDK 1.7 or later
