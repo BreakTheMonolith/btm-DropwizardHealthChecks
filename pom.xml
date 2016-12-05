@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>guru.breakthemonolith</groupId>
 	<artifactId>btm-DropwizardHealthChecks</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.0-rc1</version>
 	<packaging>pom</packaging>
 	<name>btm-DropwizardHealthChecks</name>
 	<description>btm-DropwizardHealthChecks</description>
