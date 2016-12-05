@@ -11,6 +11,12 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
+	<developers>
+        <developer>
+            <name>Derek C. Ashmore</name>
+        </developer>
+    </developers>
 
 	<dependencies>
 
@@ -202,6 +208,19 @@
 		</plugins>
 		
 	</build>
+	
+	<licenses>
+      <license>
+        <name>The Apache Software License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      </license>
+    </licenses>
+    <url>https://github.com/BreakTheMonolith/btm-DropwizardHealthChecks</url>
+    <scm>
+        <url>https://github.com/BreakTheMonolith/btm-DropwizardHealthChecks.git</url>
+        <connection>scm:git:https://github.com/BreakTheMonolith/btm-DropwizardHealthChecks.git</connection>
+        <developerConnection>Derek C. Ashmore</developerConnection>
+    </scm>
 
 	<modules>
 		<module>btm-DropwizardHealthChecks-jdbc</module>
