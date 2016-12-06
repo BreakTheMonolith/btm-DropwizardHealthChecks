@@ -4,6 +4,8 @@ A Library of reusable health checks implementing the Dropwizard Health Check Fra
 This product is dedicated to making health checks as simple as possible so that you spend less
 time dealing with non-functional requirements and get on to more fun coding activities.
 
+This product set utilizes the [Dropwizard Health Check platform](http://metrics.dropwizard.io/3.1.0/manual/healthchecks/)
+
 Health checks currently available are:
 ### Relational Database Checks ###
 [Usage and Install documentation](btm-DropwizardHealthChecks-jdbc/README.md)
