@@ -18,6 +18,11 @@ Health checks currently available are:
 
 * HttpHealthCheck - Health check for dependent Http(s) resources or services
 
+### RabbitMQ Resource Checks
+[Usage and Install documentation](btm-DropwizardHealthChecks-rabbitmq/README.md)
+
+* RabbitMQHealthCheck - Health check for RabbitMQ queue access.
+
 ### System Requirements For All Checks
 * Java JDK 1.7 or later
 * io.dropwizard.metrics / metrics-healthchecks
