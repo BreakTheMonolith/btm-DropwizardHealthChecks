@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>guru.breakthemonolith</groupId>
 		<artifactId>btm-DropwizardHealthChecks</artifactId>
-		<version>0.1.0-rc1</version>
+		<version>0.1.0-rc2</version>
 	</parent>
 	<artifactId>btm-DropwizardHealthChecks-rabbitmq</artifactId>
 	<name>btm-DropwizardHealthChecks-rabbitmq</name>
@@ -22,4 +22,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<version>0.1.0-rc1</version>
 </project>
