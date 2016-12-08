@@ -7,18 +7,18 @@ time dealing with non-functional requirements and get on to more fun coding acti
 This product set utilizes the [Dropwizard Health Check platform](http://metrics.dropwizard.io/3.1.0/manual/healthchecks/)
 
 Health checks currently available are:
-### Relational Database Checks ###
+### Relational Database Checks
 [Usage and Install documentation](btm-DropwizardHealthChecks-jdbc/README.md)
 
 * DataSourceHealthCheck - Checks applications ability to connect to a JDBC DataSource
 * JDBCHealthCheck - Checks applications ability to connect to a database via JDBC
 
-### Network Resource Checks ###
+### Network Resource Checks
 [Usage and Install documentation](btm-DropwizardHealthChecks-net/README.md)
 
 * HttpHealthCheck - Health check for dependent Http(s) resources or services
 
-### System Requirements For All Checks ###
+### System Requirements For All Checks
 * Java JDK 1.7 or later
 * io.dropwizard.metrics / metrics-healthchecks
 * org.apache.commons / commons-lang3
