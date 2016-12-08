@@ -4,7 +4,6 @@ import java.net.InetAddress;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.exception.ContextedRuntimeException;
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
@@ -74,10 +73,6 @@ public class RabbitMQHealthCheckTestIntegration {
 					.addContextValue("connectionFactory", ToStringBuilder.reflectionToString(connectionFactory));
 
 		}
-	}
-
-	@After
-	public void tearDown() throws Exception {
 	}
 
 	@Test
