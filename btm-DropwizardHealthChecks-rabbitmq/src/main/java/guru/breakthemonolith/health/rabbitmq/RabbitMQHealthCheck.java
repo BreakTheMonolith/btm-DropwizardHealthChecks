@@ -15,7 +15,16 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 /**
- * Health check for RabbitMQ queue access.
+ * Health check for RabbitMQ queue access. this check does a "passive" queue
+ * declaration. A passive declaration will error out if the queue doesn't exist
+ * or isn't available. It will <b>not</b> create the queue if it doesn't exist.
+ * 
+ * <p>
+ * Inputs required for this health check are the following:
+ * </p>
+ * <li>connectionFactory - Required. Fully configured RabbitMQ
+ * ConnectionFactory.</li>
+ * <li>queueName - Required. Queue to check existence and availability.</li>
  * 
  * @author D. Ashmore
  *

@@ -1,6 +1,5 @@
-# btm-DropwizardHealthChecks-net
-Health check for needed Network / Http(s) resources. A good use for this is to check the 
-health of dependent services. 
+# btm-DropwizardHealthChecks-rabbitmq
+Health check for RabbitMQ queue access. 
 
 ### Installation ###
 
@@ -8,16 +7,15 @@ Maven users can find dependency information [here](http://search.maven.org/#sear
 
 To install, simply include btm-DropwizardHealthChecks-net.jar and all parent dependencies described [here](../README.md). 
 In addition, you need the following dependent libraries:
-* org.apache.httpcomponents / httpclient (version 4x or above)
-* commons-validator / commons-validator
+* com.rabbitmq / amqp-client (version 4x or above)
 
-### HttpHealthCheck ###
+### RabbitMQHealthCheck ###
 
 Example usage:
 ```  
-import guru.breakthemonolith.health.net.HttpHealthCheck;
+import guru.breakthemonolith.health.rabbitmq.RabbitMQHealthCheck;
 
-HttpHealthCheck healthCheck = new HttpHealthCheck(url, requestTimeoutMillis, headerMap);
-myHealthCheckRegistry.register("myDependentMicroservice", healthCheck);
+RabbitMQHealthCheck healthCheck = new RabbitMQHealthCheck(myConnectionFactory, myQueueName);
+myHealthCheckRegistry.register("myRabbitMqQueue", healthCheck);
 ```  
 
