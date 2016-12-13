@@ -6,6 +6,8 @@ time dealing with non-functional requirements and get on to more fun coding acti
 
 This product set utilizes the [Dropwizard Health Check platform](http://metrics.dropwizard.io/3.1.0/manual/healthchecks/)
 
+Maven artifacts for all btm-DropwizardHealthChecks are [here](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22guru.breakthemonolith%22).
+
 Health checks currently available are:
 ### Relational Database Checks
 [Usage and Install documentation](btm-DropwizardHealthChecks-jdbc/README.md)
