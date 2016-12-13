@@ -15,11 +15,5 @@
 			<artifactId>amqp-client</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.force66</groupId>
-			<artifactId>ValueObjectBase</artifactId>
-			<version>1.0.0-rc1</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 </project>
