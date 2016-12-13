@@ -4,12 +4,11 @@
 	<parent>
 		<groupId>guru.breakthemonolith</groupId>
 		<artifactId>btm-DropwizardHealthChecks</artifactId>
-		<version>0.1.0-rc1</version>
+		<version>0.1.0-rc3</version>
 	</parent>
 	<artifactId>btm-DropwizardHealthChecks-net</artifactId>
 	<name>btm-DropwizardHealthChecks-net</name>
 	<description>btm-DropwizardHealthChecks-net</description>
-	<version>0.1.0-rc1</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
