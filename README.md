@@ -25,6 +25,11 @@ Health checks currently available are:
 
 * RabbitMQHealthCheck - Health check for RabbitMQ queue access.
 
+### Cassandra database Checks
+[Usage and Install documentation](btm-DropwizardHealthChecks-cassanrda/README.md)
+
+* CassandraHealthCheck - Health check for Cassanrda database access.
+
 ### System Requirements For All Checks
 * Java JDK 1.7 or later
 * io.dropwizard.metrics / metrics-healthchecks
