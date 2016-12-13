@@ -288,5 +288,6 @@
 		<module>btm-DropwizardHealthChecks-jdbc</module>
 		<module>btm-DropwizardHealthChecks-net</module>
 		<module>btm-DropwizardHealthChecks-rabbitmq</module>
+		<module>btm-DropwizardHealthChecks-cassandra</module>
 	</modules>
 </project>
