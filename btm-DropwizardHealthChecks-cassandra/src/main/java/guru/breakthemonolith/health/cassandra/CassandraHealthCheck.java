@@ -41,10 +41,10 @@ public class CassandraHealthCheck extends HealthCheck {
 		} catch (Exception e) {
 			Exception wrappedException = wrapException(e);
 			logger.error("Cassandra Healthcheck Failure", wrappedException);
-			return Result.unhealthy(e);
+			return Result.unhealthy(wrappedException);
 		} finally {
-			closeQuietly(cassandraSession);
-			closeQuietly(cassandraClient);
+			closeSessionQuietly(cassandraSession);
+			closeClusterQuietly(cassandraClient);
 		}
 
 		return Result.healthy();
@@ -66,7 +66,7 @@ public class CassandraHealthCheck extends HealthCheck {
 				.addContextValue("query", query);
 	}
 
-	private void closeQuietly(Cluster cassandraCluster) {
+	private void closeClusterQuietly(Cluster cassandraCluster) {
 		if (cassandraCluster == null)
 			return;
 		try {
@@ -77,7 +77,7 @@ public class CassandraHealthCheck extends HealthCheck {
 		}
 	}
 
-	private void closeQuietly(Session cassandraSession) {
+	private void closeSessionQuietly(Session cassandraSession) {
 		if (cassandraSession == null)
 			return;
 		try {
