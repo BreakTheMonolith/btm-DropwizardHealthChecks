@@ -30,6 +30,12 @@ Health checks currently available are:
 
 * CassandraHealthCheck - Health check for Cassanrda database access.
 
+### MongoDB database Checks
+[Usage and Install documentation](btm-DropwizardHealthChecks-mongodb/README.md)
+
+* MongoDbHealthCheck - Health check for MongoDB database access.
+
+
 ### System Requirements For All Checks
 * Java JDK 1.7 or later
 * io.dropwizard.metrics / metrics-healthchecks

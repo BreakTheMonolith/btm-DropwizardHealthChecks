@@ -6,15 +6,13 @@
 		<artifactId>btm-DropwizardHealthChecks</artifactId>
 		<version>0.1.0-rc5</version>
 	</parent>
-	<artifactId>btm-DropwizardHealthChecks-jdbc</artifactId>
-	<name>btm-DropwizardHealthChecks-jdbc</name>
-	<description>btm-DropwizardHealthChecks-jdbc</description>
+	<artifactId>btm-DropwizardHealthChecks-mongodb</artifactId>
+
 	<dependencies>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.193</version>
-			<scope>test</scope>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver</artifactId>
+			<version>3.4.1</version>
 		</dependency>
 	</dependencies>
 </project>

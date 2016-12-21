@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>guru.breakthemonolith</groupId>
 	<artifactId>btm-DropwizardHealthChecks</artifactId>
-	<version>0.1.0-rc4</version>
+	<version>0.1.0-rc5</version>
 	<packaging>pom</packaging>
 	<name>btm-DropwizardHealthChecks</name>
 	<description>btm-DropwizardHealthChecks</description>
@@ -289,5 +289,6 @@
 		<module>btm-DropwizardHealthChecks-net</module>
 		<module>btm-DropwizardHealthChecks-rabbitmq</module>
 		<module>btm-DropwizardHealthChecks-cassandra</module>
+		<module>btm-DropwizardHealthChecks-mongodb</module>
 	</modules>
 </project>
