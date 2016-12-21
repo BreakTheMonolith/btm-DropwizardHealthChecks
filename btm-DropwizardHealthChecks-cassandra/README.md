@@ -6,7 +6,7 @@ Provides health check for a Cassandra database.
 Maven users can find dependency information [here](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22guru.breakthemonolith%22%20AND%20a%3A%22btm-DropwizardHealthChecks-cassandra%22).
 
 To install, simply include btm-DropwizardHealthChecks-cassanrda.jar and all parent dependencies described [here](../README.md). In addition, you need the following dependent libraries:
-* com.rabbitmq / amqp-client (version 4x or above)
+* com.datastax.cassandra / cassandra-driver-core (version 3x or above)
 
 ### CassandraHealthCheck
 
